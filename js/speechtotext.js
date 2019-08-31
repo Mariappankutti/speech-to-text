@@ -10,7 +10,7 @@ document.body.onclick = function() {
     
   }
   
-console.log(recognition);
+
 var diagnostic = document.querySelector('.textarea');
 
 recognition.onresult = function(event) {
@@ -24,9 +24,7 @@ recognition.onresult = function(event) {
     // We then return the transcript property of the SpeechRecognitionAlternative object
   
     var last = event.results.length - 1;
-    console.log(event.results);
     var text = event.results[last][0].transcript;
-    console.log(text);
     diagnostic.textContent += text;
  }
   
@@ -46,9 +44,17 @@ recognition.onresult = function(event) {
   
   document.getElementsByClassName('start')[0].onclick = function(){
     recognition.start();
-    window.loadImage = true;
+    showHide('stop-img','start-img');
+    
   }
   document.getElementsByClassName('stop')[0].onclick  = function(){
     recognition.stop();
-    window.loadImage = false;
+    showHide('start-img','stop-img');
+  }
+  function showHide(show,hide){
+    if(document.getElementsByClassName(show)[0].classList.contains('page-hide')){
+        document.getElementsByClassName(show)[0].classList.remove('page-hide');
+        document.getElementsByClassName(hide)[0].classList.add('page-hide');
+    }
+
   }

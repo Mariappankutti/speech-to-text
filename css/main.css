@@ -17,3 +17,6 @@ img{
     width: 90%;
     padding: 10px;
 }
+.page-hide{
+    display: none;
+}
