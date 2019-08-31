@@ -1,0 +1,19 @@
+.main-div{
+    width: 100%;
+}
+.images-div{
+    width: 50%;
+    float: left;
+}
+.textdiv{
+    width: 50%;
+    float: right;
+}
+.textarea{
+    height: 200px;
+    overflow:auto;
+}
+img{
+    width: 90%;
+    padding: 10px;
+}
