@@ -11,4 +11,4 @@ Speech recognition won't work on offline.
 
 more Details please check below link
 
-https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
+[MDN link for speech api](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
